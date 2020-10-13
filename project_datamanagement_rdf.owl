@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#can_be_private -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#can_be_private">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Private"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#can_be_public -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#can_be_public">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Public"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#can_be_private"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#companies_service_used -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#companies_service_used">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Companies"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_decision_power -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_decision_power">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdfs:comment>Describes the decision power of the class Managers.
+
+Management can decide upon itself and its composition, while can influence both company-wise and company-specific the trips, wether the transport should be public or not, the payment method and wether the transport has to happen by some mean of transport.
+
+Managers can decide on which infrastructure.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Managers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Payment_method"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Private"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Public"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Trips"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_payment_method -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_payment_method">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:comment>Lists the payment method referred to the specific resource</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Offline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Online"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#person_service_used -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#person_service_used">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_air -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_air">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airports"/>
+        <propertyDisjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_ground"/>
+        <propertyDisjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_sea"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_ground -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_ground">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Railways"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Roads"/>
+        <propertyDisjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_sea"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_sea -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#uses_this_infrastructure_sea">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#average_duration -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#average_duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Trips"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#dimension_of_the_structure -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#dimension_of_the_structure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_average_salary -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_average_salary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Employees"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Managers"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#max_volume_space_inside -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#max_volume_space_inside">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#dimension_of_the_structure"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air">
+        <rdfs:comment>List of main aircraft manufacturers. This class includes two subclasses: airlift and airliner.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airports -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Companies -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Companies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Users"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Person"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Employees -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Employees">
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Managers"/>
+        <rdfs:comment>Will list all the employees with operational capability only</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure">
+        <rdfs:comment>Represent the structure used by the different kind of transport</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Managers -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Managers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Offline -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Offline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Payment_method"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Online"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Online -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Online">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Payment_method"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Payment_method -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Payment_method">
+        <rdfs:comment>This class represent the method used by Users (respectively Private and Public) for access to a particular kind of transport</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Person -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Users"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ports -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Private -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Private">
+        <disjointWith rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Public"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Public -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Public"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Railways -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Railways">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Roads -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Roads">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Infrastructure"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Trips -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Trips"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Users -->
+
+    <Class rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Users">
+        <rdfs:comment>Represent the set of all those utilize the transports. It has 2 sub classes : Companies and Person</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airbus -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airbus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Aker_Yards_France -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Aker_Yards_France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ansaldo -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ansaldo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Antonov -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Antonov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Boeing -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Boeing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Bombardier -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Bombardier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cigarette -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cigarette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Embraer -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Embraer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+        <sameAs rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#IVECO"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT_Ferroviaria -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT_Ferroviaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Falcon -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Falcon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FinCantieri -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FinCantieri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Georgetown -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Georgetown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cruise"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#IVECO -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#IVECO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Meyer_Welft -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Meyer_Welft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Mitsubishi -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Mitsubishi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Shipping"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Peugeot -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Peugeot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Piaggio&amp;C -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Piaggio&amp;C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Renault -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Renault">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Scania -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Scania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sofer -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sofer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Cargo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Passengers"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sukhoi -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sukhoi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Tupolev -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Tupolev">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airlift"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airliner"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airbus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Tupolev"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT_Ferroviaria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Peugeot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Piaggio&amp;C"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Renault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Scania"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sofer"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#FIAT_Ferroviaria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#IVECO"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Peugeot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Piaggio&amp;C"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Renault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Scania"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sofer"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airports"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ports"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Railways"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Roads"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Airbus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ansaldo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Antonov"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Boeing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Bombardier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Embraer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sukhoi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Tupolev"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#companies_service_used"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#has_payment_method"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#person_service_used"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Air"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Ground"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hellf/ontologies/2019/11/untitled-ontology-7#Sea"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
